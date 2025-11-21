@@ -13,5 +13,10 @@ UCLASS()
 class TUTORIALSPROJECT_API ATutorialsProjectGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	virtual void BeginPlay() override;
 	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSubclassOf< class UUserWidget > SampleWidgetClass;
 };
